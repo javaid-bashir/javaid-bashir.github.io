@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javaid Bashir Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+
+	      <a class="navbar-brand" href="index.html"><span>Javaid Bashir</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Certificates</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+						<br>
+
+		          		<span class="subheading">Hello!</span><br>
+			            <h1 class="mb-4 mt-3">I'm <span>Javaid </span>Bashir</h1>
+						<br>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+						<script>
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+						// Create an array of typing text
+						const typingTexts = [
+						'Masters Of Computer Applications  ',
+						'IT technical Support Specialist ',
+						'Data Analyst ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+						</script><br><br>
+			           
+					   <h4 >Senior Associate at <span> Cognizant </span> </h4>
+						 <h6 class="d-flex" style="margin-bottom: 0">With over 6+ years of experience</h6> 
+						<!-- <br> -->
+						<br><br>
+						
+			            <p><a href="https://www.linkedin.com/in/javaidbashir/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/javaidbashir9" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Javaid Bashir</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Senior Associate</span></p>
+										<p><span class="title-s">Experience: </span> <span>6 Years 6 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Hyderabd, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+
+									<span>SQL</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">40%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Greetings! I'm Javaid Bashir, a seasoned IT Technical Support Specialist with 6.6 years of enriching experience across esteemed organizations like TCS, HGS, Genpact, Accenture, Google, and GoDaddy. Throughout my journey, I've become proficient in troubleshooting, system administration, and customer support, adapting to the dynamic landscapes of tech giants. My commitment to excellence extends beyond technical prowess; I specialize in translating intricate tech concepts into user-friendly language, ensuring seamless interactions for users of all backgrounds. Collaboration is at the heart of my approach, and I've successfully worked with cross-functional teams to deliver effective solutions in fast-paced environments. This website serves as a glimpse into my professional voyage, offering insights gained and contributions to the IT community.
+									</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Technical Support Specialist &amp; Customer Support</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>IT Customer Services &amp; Data Analysis </span></li>
+									<li class="d-flex"><span>Education:</span> <span>Masters of Computer Applications</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Urdu </span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft office, Microsoft Power BI, SQL, &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Google Cloud, C and C++, Git, Google Analytics &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Web Designing, Gradening</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="05">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/javaidbashir/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p> IT customer service specialist with more than 6 years of experience. capable of managing several
+				priorities while maintaining an optimistic outlook. willing to take on more duties in order to support team
+				goals. Always looking to learn new skills, take on extra responsibilities, and grow professionally..</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan 2024 - Present</span>
+						<h2>Senior Associate</h2>
+						<span class="position">Cognizant - Hyderabd</span>
+						<p class="mt-4">Cognizant is a global technology company specializing in IT services and consulting. Headquartered in the United States, it excels in digital transformation and software development, serving industries such as healthcare and finance.
+							<ul>
+								<li>Delivered exceptional customer service daily, ensuring positive interactions and high satisfaction levels.</li>
+									<li>Resolved product or service concerns promptly, contributing to customer retention and driving sales.</li>
+										<li>Evaluated customer issues and trends, implementing proactive corrections for continuous service improvement.</li>
+											<li>Maintained and managed customer files and databases, updating account information for accurate records.</li>
+												<li>Successfully multitasked in a high-volume setting, prioritizing tasks to meet challenging deadlines.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Apr 2022 to Dec 2023</span>
+						<h2>IT Support Specialist</h2>
+						<span class="position">Accenture - Hyderabad</span>
+						<p class="mt-4">Accenture is a global professional services firm, providing a wide range of solutions in strategy, consulting, digital, technology, and operations. Renowned for innovation, it helps clients navigate challenges and achieve high performance in an ever-evolving business landscape. 
+							<ul>
+								<li>Delivered exceptional customer service daily, ensuring positive interactions and high satisfaction levels.</li>
+									<li>Resolved product or service concerns promptly, contributing to customer retention and driving sales.</li>
+										<li>Evaluated customer issues and trends, implementing proactive corrections for continuous service improvement.</li>
+											<li>Maintained and managed customer files and databases, updating account information for accurate records.</li>
+												<li>Successfully multitasked in a high-volume setting, prioritizing tasks to meet challenging deadlines.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan 2019 to April 2023</span>
+						<h2>Process Developer</h2>
+						<span class="position">Genpact - Hyderabad</span>
+						<p class="mt-4"> Genpact is a global professional services firm specializing in digital transformation and business process outsourcing. With a focus on delivering innovative solutions, Genpact helps organizations optimize operations and enhance customer experiences. The company's expertise spans various industries, driving efficiency and growth for its clients worldwide.
+							<ul>
+								<li>Prioritized secure handling of sensitive customer information, minimizing potential liability issues.</li>
+									<li> Analyzed past business processes to prevent recurring flaws in subsequent development cycles.</li>
+										<li>Authored onboarding documentation to introduce new employees to established business processes.</li>
+											<li> Conducted training for leadership and employees on updated business processes through various mediums.</li>
+												<li>Demonstrated excellent communication skills, adaptability, and critical thinking in collaborative team projects and day-to-day operations.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2018 to Dec 2018</span>
+						<h2>IT HelpDesk Support</h2>
+						<span class="position">Tata Consultancy Services - Hyderabad</span>
+						<p class="mt-4">Tata Consultancy Services (TCS) is a leading global IT services and consulting company. Renowned for its expertise in digital solutions, TCS empowers businesses with innovative technologies to thrive in the digital era. With a commitment to excellence, TCS delivers transformative results and drives success for clients across industries worldwide. 
+							<ul>
+								<li> Configured hardware, devices, and software to establish employee workstations.</li>
+									<li> Provided Tier 1 IT support through desk side services for non-technical users and document every case.</li>
+										<li>Installed, modified, and repaired software and hardware to address technical issues and generate leads for business.</li>
+											<li>Responded to end-users' support requests, guiding them through basic troubleshooting tasks patiently.</li>
+												<li>Explained technical information clearly to non-technical individuals, documented interactions, and researched solutions for customer concerns.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb 2017 to April 2017</span>
+						<h2>Customer Relationship Officer</h2>
+						<span class="position">Hinduja Global Solutions - Bengaluru</span>
+						<p class="mt-4">HGS (Hinduja Global Solutions) is a global leader in business process management, specializing in customer experience solutions. Using innovative technologies, HGS enhances operational efficiency and delivers exceptional customer service across diverse industries.
+							<ul>
+								<li> Utilized consultative approaches to comprehend customer needs and provided strategic referrals to business partners.</li>
+									<li>Monitored metrics, deriving actionable insights to enhance efficiency and performance.</li>
+										<li>Communicated with customers through Type systems to assess and address individual needs, offering timely and quality support.</li>
+											<li> Maintained a statistical database using Software, tracking customer complaints, resolutions, and satisfaction ratings.</li>
+												<li> Developed customer support strategies, informed customers about programs and services, and managed ongoing customer relations for maximum retention.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+
+				
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Jan 2010 - Feb 2013</span>
+    					<h2>Bachelor of Computer Applications</h2>
+    					<span class="position">University Of Kashmir &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+    					<p class="mt-4">
+							<li>Graduated with a solid foundation in computer science, programming, and software development.</li>
+								<li>Acquired in-depth knowledge of programming languages such as Java, C++, and Python.</li>
+									<li>Developed strong problem-solving skills through coursework in data structures, algorithms, and database management systems.</li>
+										<li> Gained practical experience in web development, including HTML, CSS, and JavaScript.</li>
+											<li> Demonstrated effective teamwork and communication skills through group projects, presentations, and a capstone project involving a database-driven software application.</li>
+												<li>Actively participated in computer science clubs and attended workshops to stay abreast of industry trends.</li>
+						</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">May 2013 - June 2016</span>
+    					<h2>Masters Of Computer Applications</h2>
+    					<span class="position">Islamic University of Science and technology</span>
+    					<p class="mt-4">
+							<li> Achieved an advanced understanding of computer science concepts, software engineering principles, and system architecture.</li>
+								<li> Specialized in web development, mastering cutting-edge technologies and methodologies.</li>
+									<li>Successfully completed the "IUST Touch" project.</li>
+										<li>Proficient in advanced programming languages like C, C++, Java, .Net, SQL,  and applied them in real-world projects.</li>
+											<li>Developed strong analytical and problem-solving skills through coursework in advanced algorithms, machine learning, and data analytics.</li>
+												<li>Collaborated with diverse peers on complex projects, honing teamwork and communication abilities.</li>
+						</p>
+    				</div>
+				</div>
+
+
+    		</div>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Courses</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+				<p class="mt-4">
+					<span class="date">June 2016 - Dec 2016</span> 
+					<span class="position">from  Rooman Technologies Bengaluru</span>
+
+    					<h3>A+, N+, MCITP, Ex-Change Server, CCNA, CCNP</h3>
+    					<p class="mt-4">
+							I am a seasoned IT professional with comprehensive training in industry-leading certifications, including A+, N+, MCITP, Exchange Server, CCNA, and CCNP. With a solid foundation in IT fundamentals and networking essentials, the MCITP certification underscores my proficiency in Microsoft technologies. My specialization extends to email infrastructure management through Exchange Server, and I possess advanced networking skills validated by the esteemed CCNA and CCNP certifications. These diverse qualifications equip me with a robust skill set, positioning me as a well-rounded professional ready to tackle the dynamic challenges of the IT landscape.			</p>
+			
+			<br>
+			<div class="row">
+				<h1 class="big-4">Skills</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+				<p class="mt-4">
+					Customer response, CRM, Quality assurance, SLA, Report preparation, Sales expertise, Complaint resolution, Training development aptitude, Strategic sales knowledge, Service standard compliance, Creative problem solving, Multi-line phone talent, POS systems expert, International sales support, Staff education and training, Technical Support, Recordkeeping strengths,
+				</p>
+			<div class="row">
+
+			<br>
+				<h1 class="big-4">Tools</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+				<p class="mt-4">
+					Microsoft Office, MySql, Microsoft PowerBI, Tableau, PicsArt, Canva, Filezilla, GitHub, Python, C and C++, HTML, CSS, JS, Photoshot.  		
+				</p>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="images/Javaid_Bashir_Resume.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Certificates</h1>
+            <h2 class="mb-4">Certificates</h2>
+            <p>Here are some of my cerificates and much more on the way</p>
+          </div>
+        </div>
+
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#"> Google Ads Search Certification </a></h3>
+                <p>Recognizes proficiency in leveraging Google Analytics to analyze website data, measure online performance, and derive actionable insights for informed decision-making.</p>
+              </div>
+            </div>
+          </div>
+
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert1.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="#">Google Ads Display Certification</a></h3>
+			  <p>Validates expertise in creating and optimizing impactful display advertising campaigns, enhancing brand visibility, and engaging audiences across digital platforms.</p>
+			</div>
+		  </div>
+		</div>
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert3.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">Google Analytics Certification</a></h3>
+				  <p>Showcases mastery in crafting, managing, and optimizing Google Ads Search campaigns, ensuring maximum ad performance and success in the dynamic landscape of online advertising.</p>
+				</div>
+			  </div>
+			</div>
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">ChatGPT for Everyone</a></h3>
+				  <p>This certificate affirms proficiency in ChatGPT, a versatile language model, enabling effective communication and problem-solving. Its natural language processing capabilities make it accessible and valuable for various applications, catering to diverse users.</p>
+				</div>
+			  </div>
+			</div>
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/cert5.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">Excel Skill for Business</a></h3>
+				  <p>This certification signifies expertise in utilizing Excel for robust data management, analysis, and reporting in a business context. Mastery of Excel's features enhances productivity, facilitates informed decision-making, and optimizes overall business operations.</p>
+				</div>
+			  </div>
+			</div>
+
+		 </div>
+	  </div>
+    </section>
+
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="50">0</strong>
+                <span>Certificates</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More Certificates<span> LinkedIn  </span> </h2>
+						<div class="heading"> <h4> I love to code and prepare dashboard for business analysis </h4>
+						<br>
+						<p><a href="https://www.linkedin.com/in/javaidbashir/" class="btn btn-primary py-3 px-5">LinkedIn</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+				  <p><a href="#//">Hyderabad, India</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel:8803092909//">+91 8803092909</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:javaidbashir9@gmail.com">javaidbashir9@gmail.com.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="images/JavaidBashir_Resume.pdf"> Click Here</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="#" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/channel/UCzrlA30SQpPA0lP3rpLVOmg"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/javaidbashir/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://twitter.com/javaid_bashir9"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/MrJavaidBashir"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/itzmejavaid/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Javaid</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
